@@ -22,17 +22,12 @@ from langchain_core.tools import tool
 # Load API Key
 # --------------------
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 # --------------------
 # LLM
 # --------------------
-llm = ChatGroq(
-    model="llama3-8b-8192",
-    temperature=0,
-    api_key=GROQ_API_KEY
-)
 
+llm = ChatGroq(api_key=os.environ["GROQ_API_KEY"])
 # --------------------
 # Embeddings + Vector DB
 # --------------------
