@@ -1,8 +1,11 @@
 streamlit
-langchain==0.2.14
-langchain-core==0.2.36
-langchain-community==0.2.12
-langchain-groq==0.1.6
-chromadb==0.5.5
 python-dotenv
-langgraph==0.2.19
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-chroma
+langchain-huggingface
+chromadb
+sentence-transformers
+pypdf
