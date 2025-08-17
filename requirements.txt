@@ -10,3 +10,4 @@ chromadb
 sentence-transformers
 pypdf
 langgraph
+pysqlite3-binary
