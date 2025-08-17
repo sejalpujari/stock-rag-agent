@@ -1,3 +1,7 @@
+__import__("pysqlite3")
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
 import streamlit as st
 from langchain_core.messages import HumanMessage
 from rag import rag_agent   # Import your RAG agent from rag.py
