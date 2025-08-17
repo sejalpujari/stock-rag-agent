@@ -26,8 +26,10 @@ os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 # --------------------
 # LLM
 # --------------------
-
-llm = ChatGroq(api_key=os.environ["GROQ_API_KEY"])
+llm = ChatGroq(
+    api_key=os.environ["GROQ_API_KEY"],
+    model="llama3-8b-8192"   # or another available Groq model
+)
 # --------------------
 # Embeddings + Vector DB
 # --------------------
