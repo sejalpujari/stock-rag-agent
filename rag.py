@@ -1,4 +1,12 @@
-import os
+# ✅ Patch sqlite before anything else
+import sys
+
+try:
+    import pysqlite3
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ImportError:
+    pass
+
 from dotenv import load_dotenv
 import streamlit as st
 from langgraph.graph import StateGraph, END
